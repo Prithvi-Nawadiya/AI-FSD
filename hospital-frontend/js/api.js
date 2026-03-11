@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5001/patients';
+const API_BASE_URL = 'https://hospital-backend.onrender.com/patients';
 
 // Helper to handle API responses
 async function handleResponse(response) {
