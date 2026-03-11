@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheMedico | Register Patient</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-staff-snake"></i>
+            <span>TheMedico</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-list-ul"></i> Dashboard</a></li>
+            <li class="active"><a href="register.html"><i class="fa-solid fa-user-plus"></i> Register Patient</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-header">
+            <h1>Register New Patient</h1>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="Admin">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <section class="form-section card glass mx-auto max-w-800">
+            <h2 class="mb-20">Patient Information</h2>
+            <form id="registerForm" class="elegant-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number *</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" min="1" required placeholder="35">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientType">Patient Type</label>
+                        <select id="patientType" name="patientType">
+                            <option value="Inpatient">Inpatient</option>
+                            <option value="Outpatient">Outpatient</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="disease">Disease / Diagnosis *</label>
+                        <input type="text" id="disease" name="disease" required placeholder="e.g. Hypertension">
+                    </div>
+                    <div class="form-group">
+                        <label for="doctorAssigned">Assigned Doctor *</label>
+                        <input type="text" id="doctorAssigned" name="doctorAssigned" required placeholder="Dr. Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="roomNumber">Room Number</label>
+                        <input type="text" id="roomNumber" name="roomNumber" placeholder="e.g. 101A">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Initial Status</label>
+                        <select id="status" name="status">
+                            <option value="Admitted" selected>Admitted</option>
+                            <option value="Discharged">Discharged</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions mt-30">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="fa-solid fa-check-circle"></i> Complete Registration
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+====================================================
+HOSPITAL PATIENT MANAGEMENT BACKEND API - DEPLOYMENT
+====================================================
+
+GitHub Repository URL: 
+[PASTE_YOUR_GITHUB_URL_HERE]
+
+Render Live API URL:
+[PASTE_YOUR_RENDER_URL_HERE]
+
+====================================================
+INSTRUCTIONS:
+1. Create a repository on GitHub.
+2. Push this backend code to the repository:
+   git add .
+   git commit -m "Initial commit for Hospital Backend"
+   git branch -M main
+   git remote add origin https://github.com/YourUsername/your-repo-name.git
+   git push -u origin main
+3. Go to Render.com and create a new "Web Service".
+4. Link it to your GitHub repository and set the `MONGO_URI` environment variable.
+5. Once deployed, copy the Render URL and your GitHub URL into this file.
+6. Copy the contents of this file or the links directly into your Word document to submit.
+====================================================

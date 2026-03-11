@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheMedico | Patient Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-staff-snake"></i>
+            <span>TheMedico</span>
+        </div>
+        <ul class="nav-links">
+            <li class="active"><a href="index.html"><i class="fa-solid fa-list-ul"></i> Dashboard</a></li>
+            <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Register Patient</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-header">
+            <h1>Patient Dashboard</h1>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="Admin">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <section class="search-section card glass">
+            <form id="searchForm" class="search-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search patient by Name or Disease...">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="button" id="clearSearchBtn" class="btn btn-secondary">Clear</button>
+            </form>
+        </section>
+
+        <!-- Patients Table -->
+        <section class="table-section card glass">
+            <div class="table-header">
+                <h2>All Patients</h2>
+                <a href="register.html" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add New</a>
+            </div>
+
+            <div class="table-container">
+                <table id="patientsTable">
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Full Name</th>
+                            <th>Disease/Diagnosis</th>
+                            <th>Doctor</th>
+                            <th>Status</th>
+                            <th>Admission Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patientsTableBody">
+                        <!-- Rows will be populated by JS -->
+                        <tr>
+                            <td colspan="7" class="text-center loading-text">Loading patients...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Update Patient Modal -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h2>Update Patient Details</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+            <form id="updateForm">
+                <input type="hidden" id="updatePatientId">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="updateName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" id="updatePhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Disease</label>
+                        <input type="text" id="updateDisease" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Doctor Assigned</label>
+                        <input type="text" id="updateDoctor" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="updateStatus">
+                            <option value="Admitted">Admitted</option>
+                            <option value="Discharged">Discharged</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary close-btn-action">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
