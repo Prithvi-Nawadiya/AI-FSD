@@ -1,5 +1,4 @@
-const API_BASE_URL = 'https://hospital-backend.onrender.com/patients';
-
+const API_BASE_URL = 'https://themedico.onrender.com/patients';
 // Helper to handle API responses
 async function handleResponse(response) {
     const data = await response.json();
