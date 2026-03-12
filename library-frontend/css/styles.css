@@ -1,9 +1,9 @@
 /* ===== CSS VARIABLES & DESIGN SYSTEM ===== */
 /* ===== CSS VARIABLES & DESIGN SYSTEM ===== */
 :root {
-    --primary-color: #3b82f6;
-    --primary-gradient: linear-gradient(135deg, #2563eb, #3b82f6);
-    --secondary-color: #eff6ff;
+    --primary-color: #4f46e5;
+    --primary-gradient: linear-gradient(135deg, #4338ca, #6366f1);
+    --secondary-color: #eef2ff;
     --text-dark: #0f172a;
     --text-muted: #64748b;
     --bg-color: #f8fafc;
@@ -16,7 +16,7 @@
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-glow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+    --shadow-glow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
 
     --radius-sm: 0.5rem;
     --radius-md: 0.75rem;

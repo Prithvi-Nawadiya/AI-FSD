@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Library Management</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Library Management</h1>
+    </header>
+
+    <main>
+      <section class="controls">
+        <input id="searchInput" placeholder="Search by title..." />
+        <button id="searchBtn">Search</button>
+        <button id="refreshBtn">Refresh</button>
+      </section>
+
+      <section class="add-form">
+        <h2>Add Book</h2>
+        <form id="addBookForm">
+          <div id="formMessage" class="form-message" aria-live="polite"></div>
+          <input name="title" placeholder="Title" required />
+          <input name="author" placeholder="Author" required />
+          <input name="isbn" placeholder="ISBN" required />
+          <input name="genre" placeholder="Genre" required />
+          <input name="publisher" placeholder="Publisher" required />
+          <input name="publicationYear" placeholder="Publication Year" type="number" />
+          <input name="totalCopies" placeholder="Total Copies" type="number" required />
+          <input name="shelfLocation" placeholder="Shelf Location" />
+          <select name="bookType">
+            <option value="Circulating">Circulating</option>
+            <option value="Reference">Reference</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Books</h2>
+        <div id="booksList">Loading...</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
