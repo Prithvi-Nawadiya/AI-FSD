@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/books', require('./routes/bookRoutes'));
 
 // Serve SPA for any other route (so client-side routing works)
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Error handler middleware
